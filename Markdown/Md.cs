@@ -4,9 +4,16 @@ namespace Markdown
 {
 	public class Md
 	{
+	    private readonly MdParser parser;
+
+	    public Md(string[] delimiters)
+	    {
+	        parser = new MdParser(delimiters);
+	    }
+
 		public string RenderToHtml(string markdown)
 		{
-			return markdown; //TODO
+		    return parser.Parse(markdown);
 		}
 	}
 
