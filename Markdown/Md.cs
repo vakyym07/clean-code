@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using Markdown.Delimiters;
+using NUnit.Framework;
 
 namespace Markdown
 {
@@ -6,7 +8,7 @@ namespace Markdown
 	{
 	    private readonly MdParser parser;
 
-	    public Md(string[] delimiters)
+	    public Md(Dictionary<string, IDelimiter> delimiters)
 	    {
 	        parser = new MdParser(delimiters);
 	    }

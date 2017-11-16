@@ -33,8 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="FluentAssertions, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -47,11 +55,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DelimitersHandler.cs" />
-    <Compile Include="HandlerResult.cs" />
+    <Compile Include="Delimiters\AbstractDelimiterHandler.cs" />
+    <Compile Include="Delimiters\BaseHandlerDelimiter.cs" />
+    <Compile Include="Delimiters\Token.cs" />
+    <Compile Include="Delimiters\DoubleUnderscoreHandler.cs" />
+    <Compile Include="Delimiters\SharpHandler.cs" />
+    <Compile Include="Delimiters\BackslashEscapeHandler.cs" />
+    <Compile Include="RenderResult.cs" />
+    <Compile Include="Delimiters\IDelimiter.cs" />
+    <Compile Include="Delimiters\SingleUnderscoreHandler.cs" />
     <Compile Include="Md.cs" />
     <Compile Include="MdParser.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Tests\BackslashEscapeHandlerTest_Should.cs" />
+    <Compile Include="Tests\DoubleUnderscoreHandlerTest_Should.cs" />
+    <Compile Include="Tests\Md_ShouldRender.cs" />
+    <Compile Include="Tests\SharpHandlerTest_Should.cs" />
+    <Compile Include="Tests\SingleUnderscoreHandlerTests_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

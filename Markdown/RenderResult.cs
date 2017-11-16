@@ -1,8 +1,8 @@
 ﻿namespace Markdown
 {
-    public class HandlerResult
+    public class RenderResult
     {
-        public HandlerResult(string renderedValue, int newPosition)
+        public RenderResult(string renderedValue, int newPosition)
         {
             RenderedValue = renderedValue;
             NewPosition = newPosition;
