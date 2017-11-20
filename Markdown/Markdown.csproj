@@ -55,23 +55,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Delimiters\AbstractDelimiterHandler.cs" />
-    <Compile Include="Delimiters\BaseHandlerDelimiter.cs" />
-    <Compile Include="Delimiters\Token.cs" />
-    <Compile Include="Delimiters\DoubleUnderscoreHandler.cs" />
-    <Compile Include="Delimiters\SharpHandler.cs" />
-    <Compile Include="Delimiters\BackslashEscapeHandler.cs" />
-    <Compile Include="RenderResult.cs" />
+    <Compile Include="Ast\AstNode.cs" />
+    <Compile Include="Ast\AstNodeType.cs" />
+    <Compile Include="Ast\AstRenderToHtml.cs" />
+    <Compile Include="DelimitersHandlers\DoubleUndescoreHandler.cs" />
+    <Compile Include="DelimitersHandlers\IDelimiterHandler.cs" />
+    <Compile Include="DelimitersHandlers\SharpHandler.cs" />
+    <Compile Include="DelimitersHandlers\SingleUnderscoreHandler.cs" />
+    <Compile Include="Delimiters\DelimiterType.cs" />
+    <Compile Include="Delimiters\IDoubleDelimiter.cs" />
+    <Compile Include="Delimiters\DoubleUnderscoreDelimiter.cs" />
+    <Compile Include="Delimiters\ISingleDelimiter.cs" />
+    <Compile Include="Delimiters\SingleSharpDelimiter.cs" />
+    <Compile Include="Delimiters\BackslashEscapeDelimiter.cs" />
+    <Compile Include="MarkdownAnalizator\MdAnalyzator.cs" />
+    <Compile Include="Parser\BaseParser.cs" />
     <Compile Include="Delimiters\IDelimiter.cs" />
-    <Compile Include="Delimiters\SingleUnderscoreHandler.cs" />
+    <Compile Include="Delimiters\SingleUnderscoreDelimiter.cs" />
     <Compile Include="Md.cs" />
-    <Compile Include="MdParser.cs" />
+    <Compile Include="Parser\DoubleDelimiterParser.cs" />
+    <Compile Include="Parser\IDelimiterParser.cs" />
+    <Compile Include="Parser\MdParser.cs" />
+    <Compile Include="Parser\SingleDelimiterParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Tests\BackslashEscapeHandlerTest_Should.cs" />
-    <Compile Include="Tests\DoubleUnderscoreHandlerTest_Should.cs" />
-    <Compile Include="Tests\Md_ShouldRender.cs" />
-    <Compile Include="Tests\SharpHandlerTest_Should.cs" />
-    <Compile Include="Tests\SingleUnderscoreHandlerTests_Should.cs" />
+    <Compile Include="Tests\MdDoubleUnderscoreTest_Should.cs" />
+    <Compile Include="Tests\Md_Shouldr.cs" />
+    <Compile Include="Tests\MdSharpTest_Should.cs" />
+    <Compile Include="Tests\MdSingleUnderscore_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
